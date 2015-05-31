@@ -46,24 +46,24 @@ module.controller('silkRoadController', ["$scope", function($scope) {
   $scope.stop1 = {
     system: $scope.systems[0], 
     station: $scope.stations[0], 
-    buy: $scope.commodities[0], 
-    sell: $scope.commodities[1],
+    buy: $scope.commodities[1], 
+    sell: $scope.commodities[0],
     prevStop: {},
     nextStop: {}
   };
   $scope.stop2 = {
     system: $scope.systems[1], 
     station: $scope.stations[1], 
-    buy: $scope.commodities[1], 
-    sell: $scope.commodities[2],
+    buy: $scope.commodities[2], 
+    sell: $scope.commodities[1],
     prevStop: {},
     nextStop: {}
   };
   $scope.stop3 = {
     system: $scope.systems[2], 
     station: $scope.stations[2], 
-    buy: $scope.commodities[2], 
-    sell: $scope.commodities[0],
+    buy: $scope.commodities[0], 
+    sell: $scope.commodities[2],
     prevStop: {},
     nextStop: {}
   };
