@@ -8,27 +8,30 @@
   </head>
   <body>
     <div ng-controller="silkRoadController">
-      <div class="col-sm-12 align-center text-center m1t text-uppercase">
+      <div class="col-sm-12 align-center text-center m2t">
         <div class="col-sm-4 block">
-          System: {{currentSystem}}
+          SYSTEM: {{currentStop.system}}
         </div>
         <div class="col-sm-4 block">
-          Station: {{currentStation}}
+          STATION: {{currentStop.station}}
         </div>
         <div class="col-sm-4 block">
-          Buy: {{currentBuy}}
+          BUY: {{currentStop.buy}}
         </div>
       </div>
-      <div class="align-center text-center m1t m1b text-uppercase">
-        Stop: {{stopNo}}
+      <div class="align-center text-center m2t">
+        STOP: {{stopNo}}
       </div>
-      <div class="col-sm-12">
-        <div class="col-sm-4 col-sm-offset-4 align-center text-center">
+      <div class="col-sm-12 m2t">
+        <div class="col-sm-4 block text-center m1t">
+          PREV: {{currentStop.prevStop.system}}
+        </div>
+        <div class="col-sm-4 align-center text-center">
           <button class="btn srbtn" ng-click="prevStop()">Prev</button>
           <button class="btn srbtn" ng-click="nextStop()">Next</button>
         </div>
-        <div class="col-sm-4 col-sm-offset-8 block">
-          {{nextSystem}}
+        <div class="col-sm-4 block text-center m1t">
+          NEXT: {{currentStop.nextStop.system}}
         </div>
       </div>
     </div>
