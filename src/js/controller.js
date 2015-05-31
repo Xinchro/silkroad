@@ -10,29 +10,43 @@ module.controller('silkRoadController', ["$scope", function($scope) {
 
   $scope.stopNo = 1;
   $scope.noOfStops = 17;
-  
-  $scope.nextSystem = $scope.systems[$scope.stopNo-1];
 
   $scope.stops = [];
 
+  /**
+   * Decrement the stop number
+   **/
   $scope.prevStop = function() {
     if($scope.stopNo > 1) {
       $scope.stopNo -= 1;
     } else {
       $scope.stopNo = $scope.noOfStops;
     }
-    $scope.currentStop = $scope.stops[$scope.stopNo-1];
+    $scope.updateCurrentStop();
   };
 
+  /**
+   * Increment the stop number
+   **/
   $scope.nextStop = function() {
     if($scope.stopNo < $scope.noOfStops) {
       $scope.stopNo += 1;
     } else {
       $scope.stopNo = 1;
     }
-    $scope.currentStop = $scope.stops[$scope.stopNo-1];
+    $scope.updateCurrentStop();
   };
 
+  /**
+   * Update the current stop
+   **/
+  $scope.updateCurrentStop = function() {
+    $scope.currentStop = $scope.stops[$scope.stopNo-1];
+  }
+
+  /**
+   * Get the stops array
+   **/   
   $scope.getStops = function() {
     return $scope.stops;
   };
@@ -40,9 +54,10 @@ module.controller('silkRoadController', ["$scope", function($scope) {
   /**
     * List of stops
     *
-    * {system, station, sell, buy, prevStop, nextStop}
+    * Stop struct: {system, station, sell, buy, prevStop, nextStop}
     **/
 
+  // Create the stops and add them to the array
   for(var i=0;i<$scope.noOfStops;i++) {
     if(i===0) {
       i2 = $scope.noOfStops-1;
@@ -59,9 +74,11 @@ module.controller('silkRoadController', ["$scope", function($scope) {
     };
     
     $scope.stops.push(stop);
-    
+
   }
 
+  // Link the stops to one another,
+  // including linking the first and last stops
   for(var i=0;i<$scope.noOfStops;i++) {
 
     if(i===0) {
@@ -77,6 +94,7 @@ module.controller('silkRoadController', ["$scope", function($scope) {
 
   }
 
+  // Set the first stop as the current stop
   $scope.currentStop = $scope.stops[0];
 
 }]);
