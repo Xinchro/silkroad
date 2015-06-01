@@ -52,6 +52,7 @@
           <div class="col-xs-5 align-left text-left">
             <div class="col-xs-12 block">
               <span class="cutoff">{{currentStop.prevStop.system}}</span>
+              <span class="cutoff hidden-xs">{{currentStop.distFromPrev}}</span>
             </div>
           </div>
           <div class="col-xs-2 text-center hidden-xs">
@@ -63,12 +64,31 @@
           </div>
           <div class="col-xs-5 align-right text-right">
             <div class="col-xs-12 block">
-              <span>{{currentStop.nextStop.system}}</span>
+              <span class="cutoff hidden-xs">{{currentStop.distToNext}}</span>
+              <span class="cutoff">{{currentStop.nextStop.system}}</span>
             </div>
           </div>
         </div>
         <div class="col-xs-3 text-left">
           <button class="btn srbtn" ng-click="nextStop()">Next</button>
+        </div>
+      </div>
+      <div class="col-xs-12 align-center text-center">
+        <div class="col-xs-6 col-xs-offset-3 info m5t">
+          <span>INFORMATION</span>
+          <hr>  
+          <div class="col-xs-6 text-right">
+            <span class="col-xs-12">Projected profit p/item (CR)</span>
+            <span class="col-xs-12">Distance from previous (LY)</span>
+            <span class="col-xs-12">Distance to next (LY)</span>
+            <span class="col-xs-12">Station faction</span>
+          </div>  
+          <div class="col-xs-6 text-left">
+            <span class="col-xs-12">{{currentStop.projectedProfitPerItem}}</span>
+            <span class="col-xs-12">{{currentStop.distFromPrev}}</span>
+            <span class="col-xs-12">{{currentStop.distToNext}}</span>
+            <span class="col-xs-12">{{currentStop.faction}}</span>
+          </div>
         </div>
       </div>
     </div>
