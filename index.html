@@ -4,10 +4,12 @@
     <meta charset="utf-8">
 
     <script src="lib/Angular/angular.min.js"></script>
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="lib/Bootstrap/js/bootstrap.min.js"></script>
     <script src="src/js/controller.js"></script>
     <link rel="stylesheet" href="lib/FontAwesome/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="lib/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="lib/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/styling.css">
 
     <link rel="icon" type="image/png" href="http://old.xinchronize.com/favicon.ico">
@@ -60,7 +62,20 @@
         </div>
       </div>
       <div class="col-xs-12 align-center text-center m2t">
-        STOP: {{stopNo}}
+        <div class="col-xs-4 col-xs-offset-4 dropdown align-center text-center">
+          <button class="btn dropdown-toggle srdropdown" type="button" id="menu1" data-toggle="dropdown">
+          <span class="caret"></span>
+          STOP: {{stopNo}}
+          <span class="caret"></span></button>
+          <ul class="col-xs-12 drpdwn-menu dropdown-menu align-center text-center srdropdown">
+            <li class="align-center text-center" ng-repeat="stop in stops" ng-click="pickStop(stop)">
+              <a href="#">
+                <span>{{stop.system}}</span>
+                <span class="hidden-xs"> - {{stop.station}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="col-xs-12 m2t">
         <div class="col-xs-3 col-sm-3 text-right">
@@ -77,9 +92,6 @@
             <i class="fa fa-chevron-left"></i>
             <i class="fa fa-chevron-right"></i>
           </div>
-          <!-- <div class="col-xs-12 col-sm-2 text-center visible-xs">
-            <>
-          </div> -->
           <div class="col-xs-12 col-sm-5 align-right text-right">
             <div class="col-xs-12 block">
               <span class="cutoff">{{currentStop.distToNext}}</span>

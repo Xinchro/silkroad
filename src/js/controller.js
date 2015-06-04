@@ -2,6 +2,7 @@ var module = angular.module('silkRoad', []);
 
 module.controller('silkRoadController', ["$scope", function($scope) {
 
+  // fill all the arrays with their respective data
   $scope.systems = ['Harm', 'Arjung', 'Scirth', 'Kaliki', 'Bommatsuri', 'Feng Tanga', 'HIP 9989', 'Popocassa', 'Lileni', 'Xi Wang Mu', 'Dheneb', 'HIP 7916', 'HIP 8830', 'HIP 9753', 'HR 827', 'Badbadzist', 'Nidayiman'];
   $scope.stations = ['Gentil Hub', 'Hiya Orbital', 'Lichtenberg City', 'Oren City', 'Austin Market', 'Waever Port', 'Capek Orbital', 'Houtman Dock', 'Wachmann Vision', 'Goddard Dock', 'Henson Gateway', 'Giunta Gateway', 'Gould Ring', 'Harawi Enterprise', 'Naddoddur Hub', 'Fabian Term', 'Kagawa Vision'];
   $scope.commodities = ['Advanced Catalysers', 'Perf. Enh./Cons. Tech.', 'Gallium', 'Prog. Cells/Perf. Enh.', 'Tobacco', 'Res. Sep./Auto Fab.', 'Crop Harv./Marine Eq.', 'Tobacco', 'Consumer Tech', 'Palladium', 'Performance Enh.', 'Crop Harvesters', 'Tobacco', 'Imp. Slaves/Gallite', 'Beryllium', 'Cons. Tech./Prog. Cell', 'Palladium/Gold'];
@@ -52,6 +53,15 @@ module.controller('silkRoadController', ["$scope", function($scope) {
    **/   
   $scope.getStops = function() {
     return $scope.stops;
+  };
+
+  /**
+   * Pick a new stop to act as current
+   * @param stop - a Stop
+   **/   
+  $scope.pickStop = function(stop) {
+    $scope.currentStop = stop;
+    $scope.stopNo = $scope.stops.indexOf(stop) + 1;
   };
 
   /**
