@@ -16,8 +16,8 @@ I'm not looking for any colaborators right now, but if you want to contribute at
 1. Add localstorage/whatever to keep/persist the current system through refreshes/pageloads
 2. Figure out a nice way to implement the connect points, since they link to multiple stations depending on the resource (tobacco, perf. enh., metals and marine eq.)
 3. Improve the additional information (make it more useful)
-  3.1 Maybe add start/stop buttons to record total profit based on projection (would also need reset button with local storage)
-  3.2 Make it more presentable/readable, especially on lower resolutions (i.e. phones, etc.)
+  1. Maybe add start/stop buttons to record total profit based on projection (would also need reset button with local storage)
+  2. Make it more presentable/readable, especially on lower resolutions (i.e. phones, etc.)
 4. Integrate Social Media so that you can tell all your friends and family where you are in the galaxy! How fun!
 
 ## Credits
