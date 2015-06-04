@@ -63,11 +63,11 @@ hr {
   border-style: solid;
   border-width: 2px;
 }
-.srbtn:hover,
-.srbtn:active {
+.srbtn:hover {
   color: rgb(255,154,0);
   outline: 0;
 } 
+
 .srbtn:focus {
   color: rgb(255,154,0);
   outline: 0;
