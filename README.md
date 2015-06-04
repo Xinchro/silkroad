@@ -14,10 +14,9 @@ I'm not looking for any colaborators right now, but if you want to contribute at
 
 ## TODO 
 1. Figure out whatever the heck these connect points are and find a nice way to implement them
-2. Add dropdown/list for quick navigation to current system/station (or whatever system/station you want)
-3. Add localstorage/whatever to keep/persist the current system through refreshes/pageloads
-4. Integrate Social Media so that you can tell all your friends and family where you are in the galaxy
+2. Add localstorage/whatever to keep/persist the current system through refreshes/pageloads
+3. Integrate Social Media so that you can tell all your friends and family where you are in the galaxy
 
 ## Credits
 * [Original Reddit post](http://www.reddit.com/r/EliteDangerous/comments/323fkn/the_eic_is_proud_to_announce_the_silk_road_a/ "Reddit post")
-* And me, you know me, I'm [Xinchro](http://www.xinchronize.com "Xinchronize").
+* And me, you know me, I'm [Xinchro](http://www.xinchronize.com "Xinchronize")
